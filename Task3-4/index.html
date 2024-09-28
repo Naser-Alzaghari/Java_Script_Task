@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 5px 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        h1,h2,h3,h4,h5,h6 {
+            color: rgb(1, 1, 180);
+        }
+        .container {
+            border: 4px solid rgb(1, 1, 180);
+            margin: 20px auto;
+            padding: 10px 30px;
+            width: 400px;
+        }
+        td, th {
+            width: 100px;
+            text-align: start;
+        }
+
+        .validation {
+            color: red;
+            font-size: smaller;
+            display: none;
+        }
+        .show_validation_message {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <h2>Use a Test Score array</h2>
+            <div>
+                <label for="name">name: </label>
+                <input type="text" name="name" id="name">
+                <p class="validation" id="name_validation">Enter a name</p>
+            </div>
+            <div>
+                <label for="score">score: </label>
+                <input type="text" name="score" id="score">
+                <p class="validation" id="score_validation">Enter a score</p>
+            </div>
+            <button id="addScore" onclick="AddScore()">Add to Array</button>
+            <button id="displayResults" onclick="DisplayResults()">Display Result</button>
+            <button id="displayScores" onclick="DisplayScores()">Display Scores</button>
+        </div>
+        <div>
+            <h3>Results</h3>
+            <p id="Average_scores">Lorem ipsum dolor sit amet consectetur.</p>
+            <p id="High_Score">Lorem ipsum dolor sit amet consectetur.</p>
+        </div>
+        <div>
+            <h3>Scores</h3>
+        </div>
+        <table>
+            <tr>
+                <th>name</th>
+                <th>score</th>
+            </tr>
+        </table>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

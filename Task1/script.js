@@ -420,4 +420,26 @@ console.log(fizzBuzz(15));
 //Q5
 
 
-//Q6
+//Q12
+{
+    let elements= [['chicken', 'nodels', 'tofu', 'beef', 'fish', 'beans'],['rice', 'pasta', 'corn', 'potato', 'quinoa', 'crackers'],['peas', 'green beans', 'kale', 'edamame', 'broccoli', 'asparagus'],['juice', 'milk', 'water', 'soy milk', 'soda', 'tea'],['apple', 'banana', 'more kale', 'ice cream', 'chocolate', 'kiwi']];
+    let meals=[];
+
+    let num_of_meals=1;
+    console.log(num_of_meals);
+    
+    for(let i=0;i<elements.length;i++)
+        num_of_meals*=elements[i].length;
+    console.log(num_of_meals);
+    let num=1;
+    for(let i=0;i<elements.length;i++){
+        for(let j=0;j<elements[i].length;j++){
+            while(){
+                
+            }
+        }
+    }
+
+    console.log(meals);
+}
+
