@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 10px;
+        }
+        #word{
+            font-size: 30px;
+            letter-spacing: 10px;
+
+        }
+        .container{
+            display: flex;
+        }
+        #used_char{
+            letter-spacing: 10px;
+        }
+    </style>
+</head>
+<body id="body">
+    <div class="container">
+        <div>
+            <div>
+                <img src="./hangman-0.svg" alt="pic" id="hangman">
+            </div>
+            <div id="word">
+            apple
+            </div>
+            <div id="left_trys">
+                0/6
+            </div>
+            <div>
+                <input type="text" id="input" placeholder="Enter a number" maxlength="1" minlength="1">
+                <button type="submit" id="check" onclick="checkInput()">
+                    check
+                </button>
+            </div>
+            <div class="youwin_youlose">
+        
+            </div>
+        </div>
+        <div>
+            <h1>Used Characters:</h1>
+            <h2 id="used_char"></h2>
+        </div>
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>

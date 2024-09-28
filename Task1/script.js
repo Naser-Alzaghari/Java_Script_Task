@@ -384,6 +384,19 @@ for(let i=0; flag < 2; i+=2){
 }
 
 //Q3
+for(let i=0; i<=50 ; i+=2){
+    console.log(i);
+}
+{
+    let i=1;
+    while(i<=50){
+        console.log(i);
+        i+=2;
+    }
+}
+
+
+//Q4
 {
     let i = 1;
     while(i<100){
@@ -398,9 +411,11 @@ for(let i=0; flag < 2; i+=2){
         }
         i++;
     }
+    console.log(", Q4");
+    
 }
 
-//Q4
+//Q5
 function fizzBuzz(i){
     let result=i;
     if(i%3==0 && i%5==0)
@@ -413,33 +428,142 @@ function fizzBuzz(i){
         return i;
     }
 }
-console.log(fizzBuzz(15));
+console.log(fizzBuzz(15)+ ", Q5");
 
 
 
-//Q5
+//Q6
+{
+    function FizzBuzzRecurseve(i){
+        if(i == 0){
+            return 0;
+        }
+        if(i%3==0 && i%5==0)
+            console.log("FizzBuzz");
+        else if (i%3==0){
+            console.log("Fizz");
+        } else if (i%5==0){
+            console.log("Buzz");
+        } else {
+            console.log(i);
+        }
+        return FizzBuzzRecurseve(i-1);
+    }
+    FizzBuzzRecurseve(100);
+    console.log(", Q6");
+    
+}
+
+//Q7
+{
+    function convert(num,array){
+        let result="";
+        while(num>0){
+            for(let i=0; i<array.length; i++){
+                if(num>=array[i]){
+                    result+=array[i]+" ";
+                    num-=array[i];
+                    break;
+                }
+            }
+        }
+        return result;
+    }
+    console.log(convert(57, [25, 10, 5, 1]));
+}
 
 
-//Q12
+//Q8
+{
+    function countOfLetter(str, char){
+        let count =0;
+        str=str.toLowerCase();
+        str.split("").forEach(element => {
+            if(element == char)
+                count++;
+        });
+        return count;
+    }
+    console.log(countOfLetter("aaaaaasdgerfa","a"));
+}
+
+//Q9
+{
+    for(let i=0; i<=20 ;i++){
+        console.log(i); 
+    }
+    console.log("-------------------");
+    
+    for(let i=3 ; i<=29 ; i+=2){
+        console.log(i);
+    }
+    console.log("-------------------");
+
+    for(let i=12 ; i>=-14 ; i-=2){
+        console.log(i);
+    }
+    console.log("-------------------");
+
+    for(let i= 50 ; i>=20 ; i-=3){
+        while(i%3 != 0){
+            i--;
+        }
+        console.log(i);
+    }
+    console.log("-------------------");
+}
+
+//Q10
+
+{
+    let str = "CodingAcademy";
+    let array = [7, 500, 'KH404', 'black', 36];
+    array.forEach(element => {
+        console.log(element);
+    });
+
+    str.split("").reverse().forEach(element => {
+        console.log(element);
+    })
+}
+
+//Q11
+{
+    let array = [7, 23, 18, 9, -13, 38, -10, 12, 0, 124];
+    let even= [];
+    let odd = [];
+    array.forEach(element => {
+        if(element%2==0){
+            even.push(element);
+        } else {
+            odd.push(element);
+        }
+    });
+    console.log(even);
+    console.log(odd);
+    
+    
+}
+
+
+
+// Q12
 {
     let elements= [['chicken', 'nodels', 'tofu', 'beef', 'fish', 'beans'],['rice', 'pasta', 'corn', 'potato', 'quinoa', 'crackers'],['peas', 'green beans', 'kale', 'edamame', 'broccoli', 'asparagus'],['juice', 'milk', 'water', 'soy milk', 'soda', 'tea'],['apple', 'banana', 'more kale', 'ice cream', 'chocolate', 'kiwi']];
     let meals=[];
-
-    let num_of_meals=1;
-    console.log(num_of_meals);
-    
-    for(let i=0;i<elements.length;i++)
-        num_of_meals*=elements[i].length;
-    console.log(num_of_meals);
-    let num=1;
-    for(let i=0;i<elements.length;i++){
-        for(let j=0;j<elements[i].length;j++){
-            while(){
-                
-            }
-        }
-    }
-
+    elements[0].forEach(Protein => {
+        elements[1].forEach(Grain => {
+            elements[2].forEach(Vegetable => {
+                elements[3].forEach(Beverage => {
+                    elements[4].forEach(Dessert => {
+                        meals.push([Protein,Grain,Vegetable,Beverage,Dessert]);
+                    });
+                });
+            });
+        });
+    });
+    console.log(meals.length);
     console.log(meals);
+
 }
 
